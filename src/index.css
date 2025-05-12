@@ -1,13 +1,123 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-color: #d4a373;
+  --secondary-color: #fef7e0;
+  --accent-color: #e78b39;
+  --accent-color-user: #79421f;
+  --text-color: #5e503f;
+  --light-color: #f8f8f8;
+  --dark-color: #2f2f2f;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.cursive {
+  font-family: "Great Vibes", cursive;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.music-player {
+  position: fixed;
+  bottom: 20px; /* Jarak dari bawah layar */
+  right: 20px; /* Jarak dari kanan layar */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Latar belakang transparan dengan sedikit hitam */
+  padding: 10px; /* Jarak dalam tombol */
+  border-radius: 50%; /* Membuat tombol berbentuk bulat */
+  cursor: pointer; /* Pointer cursor saat hover */
+  width: 30px; /* Ukuran tombol */
+  height: 30px; /* Ukuran tombol */
+  display: flex; /* Menggunakan flexbox untuk memposisikan isi tombol */
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  align-items: center; /* Memusatkan konten secara vertikal */
+}
+
+/* Menyesuaikan gaya tombol kontrol musik */
+.music-control {
+  background: none; /* Menghilangkan latar belakang */
+  border: none; /* Menghilangkan border */
+  color: rgb(255, 255, 255); /* Warna ikon putih */
+  cursor: pointer; /* Pointer saat hover */
+  padding: 0; /* Menghilangkan padding ekstra */
+  width: 100%; /* Memastikan tombol memenuhi ukuran kontainer */
+  height: 100%; /* Memastikan tombol memenuhi ukuran kontainer */
+  display: flex; /* Menggunakan flexbox untuk memposisikan ikon */
+  justify-content: center; /* Memusatkan ikon secara horizontal */
+  align-items: center; /* Memusatkan ikon secara vertikal */
+}
+
+.music-icon {
+  font-size: 1px; /* Ukuran kecil untuk ikon */
+}
+
+.music-control:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }

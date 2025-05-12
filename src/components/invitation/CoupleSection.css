@@ -1,0 +1,117 @@
+.couple-section {
+  background-color: var(--light-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.cover-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.couple-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.person {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.person-image-container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  padding: 10px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+}
+
+.person-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  border: 5px solid white;
+}
+
+.groom-image {
+  background-image: url("../assets/foto4.jpg?height=200&width=200");
+}
+
+.bride-image {
+  background-image: url("../assets/foto3.jpg?height=200&width=200");
+}
+
+.person h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.person p {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.8;
+}
+
+.person-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-divider {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .couple-container {
+    flex-direction: column;
+  }
+
+  .person {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}

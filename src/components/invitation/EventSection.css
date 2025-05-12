@@ -1,0 +1,140 @@
+.event-section {
+  background-color: var(--light-color);
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.event-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.event-icon.ceremony {
+  background-image: url("../assets/foto4.jpg?height=200&width=200");
+}
+
+.event-icon.reception {
+  background-image: url("../assets/foto3.jpg?height=200&width=200");
+}
+
+.event-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.event-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.location-btn {
+  width: 100%;
+}
+
+.countdown-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: var(--light-color);
+}
+
+.countdown-title {
+  color: var(--light-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 100%;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .countdown-value {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+}

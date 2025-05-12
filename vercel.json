@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/undangan/:name*",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+.invitation-page {
+  position: relative;
+  padding-top: 70px; /* Space for fixed header */
+}
+
+.hero-section {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url("../components/assets/Nikah.jpeg?height=1080&width=1920");
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+}
+z .hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: var(--light-color);
+}
+
+.hero-date {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.hero-message {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-date {
+    font-size: 1.2rem;
+  }
+
+  .hero-message {
+    font-size: 1.5rem;
+  }
+}
+
+/* Efek dasar ketika elemen tidak terlihat */
+.animate-on-scroll {
+  opacity: 0; /* Mulai dengan elemen yang tidak terlihat */
+  transform: translateY(50px); /* Elemen sedikit menggeser ke bawah */
+  transition: opacity 2s ease, transform 3s ease; /* Efek transisi */
+}
+
+/* Ketika elemen muncul di viewport */
+.animate-on-scroll.active {
+  opacity: 1; /* Elemen menjadi terlihat */
+  transform: translateY(0); /* Kembali ke posisi semula */
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}

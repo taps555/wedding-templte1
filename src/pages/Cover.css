@@ -1,0 +1,44 @@
+.cover-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    background-image: url("../components/assets/foto5.jpg?height=1080&width=1920"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Gelap */
+  }
+  100% {
+    background-image: url("../components/assets/foto5.jpg?height=1080&width=1920"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)); /* Terang */
+  }
+}
+
+.cover-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../components/assets/foto5.jpg?height=1080&width=1920"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Gelap saat pertama kali */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.au {
+  animation: fadeIn 3s ease-in-out forwards; /* Menerapkan animasi */
+}
+
+.ai {
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .cover-background {
+    background-position: center center;
+    transition: all 3s ease;
+  }
+}

@@ -1,0 +1,211 @@
+.cover-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+
+  /* Gradasi dari bawah ke atas */
+  background-image: linear-gradient(
+    to top,
+    rgba(254, 250, 224, 0.719),
+    rgba(0, 0, 0, 0.5)
+  );
+
+  /* Optionally, add backdrop-filter for blur */
+  backdrop-filter: blur(0px);
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 5s ease;
+}
+
+.cover-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cover-intro {
+  max-width: 600px;
+  color: beige;
+}
+
+.intro-text {
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.intro-text2 {
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: var(--accent-color-user);
+  font-style: bold;
+}
+
+.couple-names {
+  font-size: 4.5rem;
+  /* margin-bottom: 2rem; */
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.couple-namess {
+  /* margin-bottom: 2rem; */
+  color: var(--accent-color-user);
+  line-height: 1;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.open-invitation {
+  margin-top: 1rem;
+  min-width: 200px;
+}
+
+/* Mengatur gaya untuk paragraf dengan kelas "text-xl md:text-2xl mb-1 opacity-90" */
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.md\:text-2xl {
+  font-size: 1.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+/* Margin-bottom classes */
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-9 {
+  margin-bottom: 14rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+/* Padding classes */
+.p-1 {
+  padding-bottom: 0.25rem;
+}
+
+.p-2 {
+  padding-bottom: 0.5rem;
+}
+
+.p-3 {
+  padding-bottom: 0.75rem;
+}
+
+.p-4 {
+  padding-bottom: 1rem;
+}
+
+.p-5 {
+  padding-bottom: 1.25rem;
+}
+
+.p-6 {
+  padding-bottom: 1.5rem;
+}
+
+.p-7 {
+  padding-bottom: 1.75rem;
+}
+
+.p-8 {
+  padding-bottom: 2rem;
+}
+
+.p-9 {
+  padding-bottom: 2.25rem;
+}
+
+.p-10 {
+  padding-bottom: 2.5rem;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+/* Mengatur gaya untuk judul h2 dengan kelas "text-3xl md:text-4xl font-serif" */
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.md\:text-4xl {
+  font-size: 2.25rem;
+}
+
+.font-serif {
+  font-family: "Times New Roman", serif;
+}
+
+/* Mengatur gaya untuk paragraf dengan kelas "text-1xl opacity-80" */
+.text-1xl {
+  font-size: 1.125rem;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .couple-names {
+    font-size: 3rem;
+  }
+
+  .event-details {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .couple-names {
+    font-size: 2.5rem;
+  }
+}
